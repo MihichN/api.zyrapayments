@@ -3,6 +3,9 @@ import mysql from 'mysql2/promise';
 import crypto from 'crypto';
 import axios from 'axios';
 
+// Указываем, что этот роут должен выполняться только на сервере
+export const runtime = 'nodejs';
+
 // Database configuration
 const dbConfig = {
   host: process.env.DB_HOST,
