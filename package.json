@@ -2,18 +2,17 @@
   "name": "payment-api",
   "version": "1.0.0",
   "description": "Payment API for ZyraPayments",
-  "main": "index.js",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "next": "^14.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "mysql2": "^3.6.0",
-    "axios": "^1.6.0",
-    "crypto": "^1.0.1"
+    "axios": "^1.6.0"
   }
 } 
