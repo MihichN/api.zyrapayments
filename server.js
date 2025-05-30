@@ -6,8 +6,24 @@ const crypto = require('crypto');
 const axios = require('axios');
 
 const app = express();
-app.use(cors());
+
+// Настройка CORS
+app.use(cors({
+  origin: '*', // В продакшене замените на конкретные домены
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
 app.use(express.json());
+
+// Обработка корневого маршрута
+app.get('/', (req, res) => {
+  res.json({
+    status: 'ok',
+    message: 'Payment API is running',
+    version: '1.0.0'
+  });
+});
 
 // Database configuration
 const dbConfig = {
